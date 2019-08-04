@@ -1,6 +1,6 @@
 """Thread tests."""
 
-from py2ch.thread import Thread
+from pych.thread import Thread
 
 
 def test_thread_success():

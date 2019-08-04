@@ -2,7 +2,7 @@
 
 from typing import List
 
-from py2ch.file import File
+from pych.file import File
 
 
 class Post(object):
