@@ -7,8 +7,6 @@ class File(object):
     def __init__(self, **kwargs):
         """Parse file info data."""
         self.displayname = kwargs['displayname']
-        self.duration = kwargs['duration']
-        self.duration_secs = kwargs['duration_secs']
         self.fullname = kwargs['fullname']
         self.height = kwargs['height']
         self.md5 = kwargs['md5']
@@ -21,3 +19,7 @@ class File(object):
         self.tn_width = kwargs['tn_width']
         self.type = kwargs['type']
         self.width = kwargs['width']
+
+        # For video only
+        self.duration = kwargs.get('duration')
+        self.duration_secs = kwargs.get('duration_secs')
