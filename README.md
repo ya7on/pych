@@ -1,6 +1,8 @@
 # Py2ch
 
 [![codecov](https://codecov.io/gh/BehindLoader/py2ch/branch/master/graph/badge.svg)](https://codecov.io/gh/BehindLoader/py2ch)
+[![Build Status](https://travis-ci.com/BehindLoader/py2ch.svg?branch=master)](https://travis-ci.com/BehindLoader/py2ch)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 
 ## Docs
 
