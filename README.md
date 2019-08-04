@@ -1,2 +1,1 @@
-# python-template
-Python template repository
+# Py2ch
