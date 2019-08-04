@@ -8,5 +8,8 @@ install:
 
 script:
   - flake8
-  - pytest
+  - py.test --cov --cov-config=setup.cfg
   - mypy py2ch/
+
+after_success:
+  - codecov
