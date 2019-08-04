@@ -9,3 +9,4 @@ install:
 script:
   - flake8
   - pytest
+  - mypy py2ch/
