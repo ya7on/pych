@@ -1,0 +1,3 @@
+-r requirements.txt
+pytest==5.0.1
+wemake-python-styleguide==0.11.1
