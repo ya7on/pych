@@ -4,7 +4,7 @@ from typing import List
 
 import requests
 
-from py2ch.thread import Thread
+from pych.thread import Thread
 
 
 class Catalog(object):

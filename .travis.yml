@@ -9,7 +9,7 @@ install:
 script:
   - flake8
   - py.test --cov --cov-config=setup.cfg
-  - mypy py2ch/
+  - mypy pych/
 
 after_success:
   - codecov

@@ -1,7 +1,7 @@
 """Catalog tests."""
 
-from py2ch.catalog import Catalog
-from py2ch.thread import Thread
+from pych.catalog import Catalog
+from pych.thread import Thread
 
 
 def test_catalog_success():

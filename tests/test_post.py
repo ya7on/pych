@@ -1,7 +1,7 @@
 """Post tests."""
 
-from py2ch.file import File
-from py2ch.post import Post
+from pych.file import File
+from pych.post import Post
 
 
 def test_post_success():

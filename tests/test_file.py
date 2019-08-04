@@ -1,6 +1,6 @@
 """File tests."""
 
-from py2ch.file import File
+from pych.file import File
 
 ALLOWED_FILE_EXTENSIONS = (
     {  # JPG

@@ -4,7 +4,7 @@ from typing import List
 
 import requests
 
-from py2ch.post import Post
+from pych.post import Post
 
 
 class Thread(object):

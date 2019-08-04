@@ -1,15 +1,21 @@
-# Py2ch
+# PyCh
 
-[![codecov](https://codecov.io/gh/BehindLoader/py2ch/branch/master/graph/badge.svg)](https://codecov.io/gh/BehindLoader/py2ch)
-[![Build Status](https://travis-ci.com/BehindLoader/py2ch.svg?branch=master)](https://travis-ci.com/BehindLoader/py2ch)
+[![codecov](https://codecov.io/gh/BehindLoader/pych/branch/master/graph/badge.svg)](https://codecov.io/gh/BehindLoader/pych)
+[![Build Status](https://travis-ci.com/BehindLoader/pych.svg?branch=master)](https://travis-ci.com/BehindLoader/pych)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 
 ## Usage
 
+Download pych:
+
+```
+$ pip install pych
+```
+
 First import:
 
 ```
->>> from py2ch.catalog import Catalog
+>>> from pych.catalog import Catalog
 ```
 
 Get threads list:
@@ -47,7 +53,7 @@ Get post files:
 
 ## Docs
 
-### `class py2ch.catalog.Catalog(board: str)`
+### `class pych.catalog.Catalog(board: str)`
 
 Threads catalog class. Accepts the name of the board.
 
@@ -59,11 +65,11 @@ The board short name.
 
 #### `Catalog.threads`
 
-__type__: [`Threads[]`](#class-py2chthreadthreadkwargs)
+__type__: [`Threads[]`](#class-pychthreadthreadkwargs)
 
 Threads list in specified board. (Lazy property, loads only when called.)
 
-### `class py2ch.file.File(**kwargs)`
+### `class pych.file.File(**kwargs)`
 
 Attachment file in post.
 
@@ -151,7 +157,7 @@ __type__: `int`
 The attachment file width.
 
 
-### `class py2ch.post.Post(**kwargs)`
+### `class pych.post.Post(**kwargs)`
 
 #### `Post.board`
 
@@ -197,7 +203,7 @@ __type__: `int`
 
 #### `Post.files`
 
-__type__: [`File[]`](#class-py2chfilefilekwargs)
+__type__: [`File[]`](#class-pychfilefilekwargs)
 
 List of File instances.
 
@@ -261,7 +267,7 @@ __type__: `str`
 
 ...
 
-### `class py2ch.thread.Thread(**kwargs)`
+### `class pych.thread.Thread(**kwargs)`
 
 #### `Thread.board`
 
@@ -325,6 +331,6 @@ Thread full URL.
 
 #### `Thread.posts`
 
-__type__: [`Post[]`](#class-py2chpostpostkwargs)
+__type__: [`Post[]`](#class-pychpostpostkwargs)
 
 Get thread posts list.
