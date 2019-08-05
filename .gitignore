@@ -10,3 +10,7 @@ __pycache__/
 # IDE and code editors
 .vscode
 .idea
+
+# Codecov coverage
+.coverage
+htmlcov/
