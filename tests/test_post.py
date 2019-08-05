@@ -69,3 +69,5 @@ def test_post_success():
         lambda post_file: isinstance(post_file, File),
         post.files,
     ))
+
+    assert str(post) == '<Post #1488>'

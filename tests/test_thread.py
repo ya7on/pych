@@ -1,5 +1,7 @@
 """Thread tests."""
 
+from pych.catalog import Catalog
+from pych.post import Post
 from pych.thread import Thread
 
 
@@ -32,3 +34,18 @@ def test_thread_success():
         board='test',
         num=thread_data['num'],
     )
+
+    assert str(thread) == '<Thread board="test" #1488 "Test subject">'
+
+
+def test_thread_with_connection():
+    """Test Thread with connection to 2ch."""
+    catalog = Catalog('test')
+    thread = catalog.threads[0]
+
+    assert isinstance(thread, Thread)
+
+    posts_list = thread.posts
+    assert isinstance(posts_list, list)
+    for post in posts_list:
+        assert isinstance(post, Post)
