@@ -8,6 +8,8 @@ def test_catalog_success():
     """Test successful work of Catalog."""
     catalog_instance = Catalog('test')
 
+    assert str(catalog_instance) == '<Catalog board="test">'
+
     assert catalog_instance.board == 'test'
 
     threads_list = catalog_instance.threads
