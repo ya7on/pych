@@ -8,29 +8,29 @@ from pych.file import File
 class Post(object):
     """Class for thread post."""
 
-    def __init__(self, **kwargs) -> None:
+    def __init__(self, post_info, board) -> None:
         """Parse post info data."""
-        self.board: str = kwargs['board']
-        self.banned: int = kwargs['banned']
-        self.closed: int = kwargs['closed']
-        self.comment: str = kwargs['comment']
-        self.date: str = kwargs['date']
-        self.email: str = kwargs['email']
-        self.endless: int = kwargs['endless']
+        self.board: str = board
+        self.banned: int = post_info['banned']
+        self.closed: int = post_info['closed']
+        self.comment: str = post_info['comment']
+        self.date: str = post_info['date']
+        self.email: str = post_info['email']
+        self.endless: int = post_info['endless']
         self.files: List[File] = [
-            File(**file_info)
-            for file_info in kwargs['files']
+            File(file_info)
+            for file_info in post_info['files']
         ]
-        self.lasthit: int = kwargs['lasthit']
-        self.name: str = kwargs['name']
-        self.num: int = kwargs['num']
-        self.number: int = kwargs['number']
-        self.op: int = kwargs['op']
-        self.parent: str = kwargs['parent']
-        self.sticky: int = kwargs['sticky']
-        self.subject: str = kwargs['subject']
-        self.timestamp: int = kwargs['timestamp']
-        self.trip: str = kwargs['trip']
+        self.lasthit: int = post_info['lasthit']
+        self.name: str = post_info['name']
+        self.num: int = post_info['num']
+        self.number: int = post_info['number']
+        self.op: int = post_info['op']
+        self.parent: str = post_info['parent']
+        self.sticky: int = post_info['sticky']
+        self.subject: str = post_info['subject']
+        self.timestamp: int = post_info['timestamp']
+        self.trip: str = post_info['trip']
 
     def __repr__(self) -> str:
         """Visual presentation of class object."""

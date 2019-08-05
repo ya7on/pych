@@ -86,7 +86,7 @@ ALLOWED_FILE_EXTENSIONS = (
 def test_file_success():
     """Test successful work of File."""
     for file_info in ALLOWED_FILE_EXTENSIONS:
-        file_instance = File(**file_info)
+        file_instance = File(file_info)
 
         assert file_instance.displayname == file_info.get('displayname')
         assert file_instance.duration == file_info.get('duration')
