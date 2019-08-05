@@ -7,7 +7,6 @@ from pych.post import Post
 def test_post_success():
     """Test successful work of Post."""
     post_info = {
-        'board': 'test',
         'banned': 0,
         'closed': 0,
         'comment': 'Test comment',
@@ -46,9 +45,9 @@ def test_post_success():
         'trip': '',
     }
 
-    post = Post(**post_info)
+    post = Post(post_info, board='test')
 
-    assert post.board == post_info['board']
+    assert post.board == 'test'
     assert post.banned == post_info['banned']
     assert post.closed == post_info['closed']
     assert post.comment == post_info['comment']

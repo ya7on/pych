@@ -10,17 +10,17 @@ from pych.post import Post
 class Thread(object):
     """Thread object."""
 
-    def __init__(self, **kwargs) -> None:
+    def __init__(self, thread_info, board) -> None:
         """Parse kwargs arguments."""
-        self.board: str = kwargs['board']
-        self.comment: str = kwargs['comment']
-        self.lasthit: int = kwargs['lasthit']
-        self.num: str = kwargs['num']
-        self.posts_count: int = kwargs['posts_count']
-        self.score: float = kwargs['score']
-        self.subject: str = kwargs['subject']
-        self.timestamp: int = kwargs['timestamp']
-        self.views: int = kwargs['views']
+        self.board: str = board
+        self.comment: str = thread_info['comment']
+        self.lasthit: int = thread_info['lasthit']
+        self.num: str = thread_info['num']
+        self.posts_count: int = thread_info['posts_count']
+        self.score: float = thread_info['score']
+        self.subject: str = thread_info['subject']
+        self.timestamp: int = thread_info['timestamp']
+        self.views: int = thread_info['views']
 
         self.url = '/{board}/{num}.html'.format(
             board=self.board,
@@ -41,7 +41,7 @@ class Thread(object):
         posts_list = json_data['threads'].pop()['posts']
 
         return [
-            Post(board=self.board, **post_info)
+            Post(post_info, board=self.board)
             for post_info in posts_list
         ]
 

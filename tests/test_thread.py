@@ -6,7 +6,6 @@ from pych.thread import Thread
 def test_thread_success():
     """Test successful work of Thread."""
     thread_data = {
-        'board': 'test',
         'comment': 'Test comment',
         'lasthit': 1564943807,
         'num': '1488',
@@ -17,9 +16,9 @@ def test_thread_success():
         'views': 420,
     }
 
-    thread = Thread(**thread_data)
+    thread = Thread(thread_data, board='test')
 
-    assert thread.board == thread_data['board']
+    assert thread.board == 'test'
     assert thread.comment == thread_data['comment']
     assert thread.lasthit == thread_data['lasthit']
     assert thread.num == thread_data['num']
@@ -30,6 +29,6 @@ def test_thread_success():
     assert thread.views == thread_data['views']
 
     assert thread.url == '/{board}/{num}.html'.format(
-        board=thread_data['board'],
+        board='test',
         num=thread_data['num'],
     )

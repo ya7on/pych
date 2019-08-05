@@ -24,7 +24,7 @@ class Catalog(object):
         threads_list = json_data['threads']
 
         return [
-            Thread(board=self.board, **thread_info)
+            Thread(thread_info, board=self.board)
             for thread_info in threads_list
         ]
 
