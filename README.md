@@ -334,3 +334,12 @@ Thread full URL.
 __type__: [`Post[]`](#class-pychpostpostkwargs)
 
 Get thread posts list.
+
+### `def pych.info.boards() -> Dict[str, str]`
+
+__returns__: `Dict[str, str]`
+
+Get boards. Returns dict where `key` is a board id and `value` is a board name.
+
+For example: `{ "b": "Бред" }`.
+
