@@ -1,8 +1,10 @@
 # PyCh
 
-[![codecov](https://codecov.io/gh/BehindLoader/pych/branch/master/graph/badge.svg)](https://codecov.io/gh/BehindLoader/pych)
-[![Build Status](https://travis-ci.com/BehindLoader/pych.svg?branch=master)](https://travis-ci.com/BehindLoader/pych)
+![Codecov](https://img.shields.io/codecov/c/github/BehindLoader/pych)
+![Travis (.com)](https://img.shields.io/travis/com/BehindLoader/pych)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+![GitHub issues by-label](https://img.shields.io/github/issues/BehindLoader/pych/help%20wanted)
+![GitHub stars](https://img.shields.io/github/stars/BehindLoader/pych)
 
 ## Usage
 
