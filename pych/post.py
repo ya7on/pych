@@ -2,13 +2,39 @@
 
 from typing import List
 
-from pych.file import File
+from mypy_extensions import TypedDict
+
+from pych.file import File, FileInfo
+
+PostInfo = TypedDict(
+    'PostInfo',
+    {
+        'board': str,
+        'banned': int,
+        'closed': int,
+        'comment': str,
+        'date': str,
+        'email': str,
+        'endless': int,
+        'files': List[FileInfo],
+        'lasthit': int,
+        'name': str,
+        'num': int,
+        'number': int,
+        'op': int,
+        'parent': str,
+        'sticky': int,
+        'subject': str,
+        'timestamp': int,
+        'trip': str,
+    },
+)
 
 
 class Post(object):
     """Class for thread post."""
 
-    def __init__(self, post_info, board) -> None:
+    def __init__(self, post_info: PostInfo, board: str) -> None:
         """Parse post info data."""
         self.board: str = board
         self.banned: int = post_info['banned']

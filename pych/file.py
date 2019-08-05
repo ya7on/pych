@@ -2,11 +2,34 @@
 
 from typing import Optional
 
+from mypy_extensions import TypedDict
+
+FileInfo = TypedDict(
+    'FileInfo',
+    {
+        'displayname': str,
+        'fullname': str,
+        'height': int,
+        'md5': str,
+        'name': str,
+        'nsfw': int,
+        'path': str,
+        'size': int,
+        'thumbnail': str,
+        'tn_height': int,
+        'tn_width': int,
+        'type': int,
+        'width': int,
+        'duration': Optional[int],
+        'duration_secs': Optional[int],
+    },
+)
+
 
 class File(object):
     """Class for files."""
 
-    def __init__(self, file_info):
+    def __init__(self, file_info: FileInfo) -> None:
         """Parse file info data."""
         self.displayname: str = file_info['displayname']
         self.fullname: str = file_info['fullname']

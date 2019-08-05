@@ -3,14 +3,30 @@
 from typing import List
 
 import requests
+from mypy_extensions import TypedDict
 
 from pych.post import Post
+
+ThreadInfo = TypedDict(
+    'ThreadInfo',
+    {
+        'board': str,
+        'comment': str,
+        'lasthit': int,
+        'num': str,
+        'posts_count': int,
+        'score': float,
+        'subject': str,
+        'timestamp': int,
+        'views': int,
+    },
+)
 
 
 class Thread(object):
     """Thread object."""
 
-    def __init__(self, thread_info, board) -> None:
+    def __init__(self, thread_info: ThreadInfo, board: str) -> None:
         """Parse kwargs arguments."""
         self.board: str = board
         self.comment: str = thread_info['comment']
