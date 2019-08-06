@@ -1,5 +1,8 @@
 """File tests."""
 
+from os import path, remove
+
+from pych.catalog import Catalog
 from pych.file import File
 
 ALLOWED_FILE_EXTENSIONS = (
@@ -106,3 +109,18 @@ def test_file_success():
 
         for key in file_info:
             assert hasattr(file_instance, key)  # noqa: WPS421
+
+
+def test_file_with_connection():
+    """Test File class with connection to 2ch."""
+    catalog = Catalog('test')
+    thread = catalog.threads[0]
+    post = thread.posts[0]
+
+    # Download file
+    files_list = post.files
+    for file_descr in files_list:
+        assert isinstance(file_descr, File)
+        file_descr.download(file_descr.name)
+        assert path.exists(file_descr.name)
+        remove(file_descr.name)
