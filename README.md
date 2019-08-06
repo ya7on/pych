@@ -158,6 +158,9 @@ __type__: `int`
 
 The attachment file width.
 
+#### `File.download(destination: str) -> None`
+
+Download and save file to specified destination.
 
 ### `class pych.post.Post(**kwargs)`
 

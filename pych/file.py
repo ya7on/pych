@@ -2,6 +2,7 @@
 
 from typing import Optional
 
+import requests
 from mypy_extensions import TypedDict
 
 FileInfo = TypedDict(
@@ -48,3 +49,9 @@ class File(object):
         # For video only
         self.duration: Optional[int] = file_info.get('duration')
         self.duration_secs: Optional[int] = file_info.get('duration_secs')
+
+    def download(self, destination: str) -> None:
+        """Download file to specified destination."""
+        request_data = requests.get('https://2ch.hk/{0}'.format(self.path))
+        with open(destination, 'wb') as file_descr:
+            file_descr.write(request_data.content)
